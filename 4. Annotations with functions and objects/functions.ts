@@ -18,3 +18,45 @@ let add3: (a: number, b: number) => void = (a, b) => {
 };
 
 const add = (a: number, b: number) => a + b; //same logic as above, add will infer all the types from its arrow function, hence add's type would become of what the arrow function is returning(in our case number)
+
+//Anonymous function and normal function
+
+function divide(a:number, b:number):number {
+  return a/b;
+}
+
+const multiply:(a:number,b:number)=>void = function(a:number, b:number){
+  return a*b;
+}
+
+const nullTypeFn = (message: string):void =>{
+  console.log(message)
+  //a return of undefined would work
+  return undefined;
+}
+
+//also a type of 'never' exits (in case we never want to return anything and we know we are never going to reach the end of the function)
+
+const  forecast = {
+  date : new Date(),
+  weather : 'sunny'
+}
+// const logWeather = (forecast:{date: Date, weather: string}):void =>{
+//     console.log(forecast.date)
+//     console.log(forecast.weather)
+//   }
+// logWeather(forecast)
+
+//destructuring the arguments in a function 
+const logWeather = ({date}:{date: Date}):void =>{
+    console.log(date)
+    // console.log(forecast.weather)
+  }
+logWeather(forecast)
+
+
+
+  
+
+
+
