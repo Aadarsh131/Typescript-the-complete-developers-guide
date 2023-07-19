@@ -1,5 +1,5 @@
 import {User} from './User';
-// import {Company} from './Company'
+import {Company} from './Company'
 
 // const company = new Company()
 //
@@ -8,9 +8,10 @@ import {User} from './User';
 import { CustomMap } from "./CustomMap";
 
 const user = new User(); 
+const company = new Company();
 const customMap = new CustomMap('map');
 
-customMap.addUserMarker(user)
-
-// function initMap(): void {
-// }
+// customMap.addUserMarker(user)
+// customMap.addCompanyMarker(company)
+ customMap.addMarker(user)
+customMap.addMarker(company)
